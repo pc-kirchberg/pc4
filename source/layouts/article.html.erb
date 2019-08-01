@@ -1,0 +1,12 @@
+<% wrap_layout :layout do %>
+    <h1>
+    <%= current_page.data.title %>
+    </h1>
+
+    <div class="meta">
+        Tags:
+        <%= current_article.tags.map {|t| link_to t, tag_path(t)}.join(", ") %>
+    </div>
+
+    <%= yield %>
+<% end %>
