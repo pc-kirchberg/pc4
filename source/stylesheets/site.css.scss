@@ -4,7 +4,6 @@ body {
     "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
     "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
     "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  padding: 4em 1rem;
 }
 
 h2.sub {
@@ -30,6 +29,7 @@ main {
   max-width: 900px;
   margin: 0 auto;
   position: relative;
+  padding: 4em 1rem;
 }
 
 
@@ -43,4 +43,68 @@ main {
   margin-right: -50vw;
   height: 200px;
   overflow: hidden;
+}
+
+aside {
+  margin-top: 6em;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3em;
+  background-color: #3886df;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  z-index: 1000;
+  transition: 900ms all cubic-bezier(.32,.11,.39,.97);
+  overflow: hidden;
+  vertical-align: middle;
+  padding: 0 2em;
+  .navlink {
+    height: auto;
+    display: inline-block;
+    color: #fafafa;
+    text-decoration: none;
+    padding: 0.6em;
+    margin: 0 0.4em;
+    &:hover {
+      background-color: white;
+      color: #3886df;
+    }
+  }
+  &:hover {
+    height: 9em;
+    background-color: #2f70bb;
+    .navmenu li:not(:first-child) {
+      display: inherit;
+    }
+  }
+
+  .spacer {
+    display: inline-block;
+    height: 3em;
+    width: 0;
+    margin-right: 4em;
+  }
+
+  .navmenu {
+    display: inline-block;
+    padding: 0 0.6em;
+    margin: 0 0.4em;
+    list-style-type: none;
+    li {
+      &:not(:first-child) {
+        margin: .5em 0;
+        display: none;
+      }
+      a {
+        // padding: 0 ;
+        margin: 0;
+      }
+    }
+  }
 }
