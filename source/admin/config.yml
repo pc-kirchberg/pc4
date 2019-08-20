@@ -29,6 +29,6 @@ collections:
         widget: "list"
         fields:
           - {label: Name, name: name, widget: string}
-          - {label: Position, name: position, widget: string},
+          - {label: Position, name: position, widget: string}
           - {label: Picture, name: picture_url, widget: image, required: false}
           - {label: Bio, name: bio, widgeT: markdown, required: false}
