@@ -13,7 +13,7 @@ layout: layout
             <a id="<%= slugify dude.name %>"><span class="name"><%= dude.name %></span></a>
             <span class="position"><%= dude.position %></span>
             <% unless dude.bio.nil? %>
-                <p><%= dude.bio %></p>
+                <p><%= markdown dude.bio %></p>
             <% end %>
         </div>
     <% end %>
