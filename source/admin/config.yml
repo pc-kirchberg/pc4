@@ -5,6 +5,8 @@ backend:
 media_folder: source/images/uploads
 public_folder: /images/uploads
 
+publish_mode: editorial_workflow
+
 collections:
   - name: articles
     label: Articles
