@@ -1,0 +1,22 @@
+---
+layout: layout
+pageable: true
+per_page: 5
+---
+
+<h1>News</h1>
+<% (blog.tags["featured"] || []).each do | article | %>
+  <article>
+    <h2>
+      <%= article.title %>
+    </h2>
+
+    <p>
+      <%= article.summary %>
+    </p>
+
+    <%= link_to 'Read more', article %>
+  </article>
+
+<% end %>
+<% content_for :body_class, "newspage" %>

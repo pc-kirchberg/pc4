@@ -1,12 +1,28 @@
 <% wrap_layout :layout do %>
-    <h1>
-    <%= current_page.data.title %>
-    </h1>
+    <article>
+        <h1>
+            <%= current_page.data.title %>
+        </h1>
 
-    <div class="meta">
-        Tags:
-        <%= current_article.tags.map {|t| link_to t, tag_path(t)}.join(", ") %>
-    </div>
+        <div class="meta">
+            <div>
+            <% unless current_page.data.author.nil? %>
+                <% author = (data.people2020.members.select {|dude| dude.name.downcase == current_page.data.author.downcase })[0] %>
+                <% unless author.nil? %>
+                    Written by <a href="/pages/meet-the-committee/2019-2020.html#<%= slugify author.name%>"><%= author.name %></a>
+                <% end %>
+            <% end %>
+            </div>
+            <div>
+                Tags: <%= current_article.tags.map {|t| link_to t, tag_path(t)}.join(", ") %>
+            </div>
+            <div>
+                <%= reading_time current_article.body %>
+            </div>
+        </div>
 
-    <%= yield %>
+        <div class="content">
+            <%= yield %>
+        </div>
+    </article>
 <% end %>

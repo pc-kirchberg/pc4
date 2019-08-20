@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: pc-kirchberg/pc4
 
 media_folder: source/images/uploads
 public_folder: /images/uploads
@@ -17,3 +18,15 @@ collections:
       - {label: Publish Date, name: date, widget: datetime}
       - {label: Body, name: body, widget: markdown}
       - {label: Tags, name: tags, widget: list, required: false}
+  - name: people
+    label: PC Members
+    files:
+      - name: people2020
+        label: 2019-2020
+        file: data/people2020.yml
+        widget: "list"
+        fields:
+          - {label: Name, name: name, widget: string}
+          - {label: Position, name: position, widget: string},
+          - {label: Picture, name: picture_url, widget: image, required: false}
+          - {label: Bio, name: bio, widgeT: markdown, required: false}

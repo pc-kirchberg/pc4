@@ -1,3 +1,6 @@
+require_relative 'lib/reading_time'
+require_relative 'lib/slugify'
+
 ###
 # Page options, layouts, aliases and proxies
 ###
@@ -8,6 +11,8 @@
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
+
+set :markdown_engine, :redcarpet
 
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout
@@ -52,12 +57,18 @@ configure :development do
   activate :livereload
 end
 
-# Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+activate :reading_time
+activate :slugify
+
+helpers do
+  
+  def markdown(text)
+    renderer = Redcarpet::Render::XHTML.new
+    markdown = Redcarpet::Markdown.new(renderer)
+    return markdown.render(text)
+  end
+  
+end
 
 # Build-specific configuration
 configure :build do

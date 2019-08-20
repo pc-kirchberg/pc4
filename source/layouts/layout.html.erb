@@ -10,17 +10,18 @@
     <%= stylesheet_link_tag "site" %>
     <%= yield_content :styles %>
   </head>
-  <body>
+  <body class="<%= yield_content :body_class %>">
 
   <nav class="navbar">
+      <button class="menu-button navlink">Menu</button>
       <a href="/" class="navlink">Home</a>
-      <a href="/" class="navlink">News</a>
+      <a href="/news.html" class="navlink">News</a>
       <ul class="navmenu">
-        <li><a class="navlink" href="/">Meet The Committee</a></li>
-        <li><a class="navlink" href="/">2019-2020</a></li>
+        <li><a class="navlink" href="/pages/meet-the-committee/2019-2020.html">Meet The Committee</a></li>
+        <li><a class="navlink" href="/pages/meet-the-committee/2019-2020.html">2019-2020</a></li>
         <li><a class="navlink" href="/">2018-2019</a></li>
-        <li><a class="navlink" href="/">2017-2018</a></li>
       </ul>
+      <a href="/pages/contact-us.html" class="navlink">Contact Us</a>
   </nav>
 
     <main id="main" role="main">
@@ -49,6 +50,9 @@
       </ol>
     </aside>
     </main>
+    <footer>
+      Copyright &copy; 2019-forever the Pupils' Committee of the European School Luxembourg 1. All rights reserved, except for when they aren't. If you have to ask, they are.
+    </footer>
     <%= javascript_include_tag "site" %>
     <%= yield_content :scripts %>
   </body>

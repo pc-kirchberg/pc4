@@ -1,0 +1,20 @@
+---
+layout: layout
+---
+
+<h1>Meet The Committee</h1>
+
+<div class="people">
+    <% data.people2020.members.each do |dude| %>
+        <div class="person">
+            <% unless dude.picture_url.nil? %>
+                <img class="picture" src="<%= dude.picture_url %>" width="80" height="80">
+            <% end %>
+            <a id="<%= slugify dude.name %>"><span class="name"><%= dude.name %></span></a>
+            <span class="position"><%= dude.position %></span>
+            <% unless dude.bio.nil? %>
+                <p><%= dude.bio %></p>
+            <% end %>
+        </div>
+    <% end %>
+</div>

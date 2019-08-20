@@ -1,31 +1,20 @@
 ---
-pageable: true
-per_page: 10
 ---
-<h1>The Pupils' Committee of the European School Luxembourg 1</h1>
-<h2 class="sub">Keeping promises since 1953!</h2>
 
+<div class="big-effing-header">
+<h1>The Pupils' Committee of the European School Luxembourg 1</h1>
+<h1 class="sub">Keeping promises since 1953!</h1>
+</div>
 <figure class="parallax-strip">
-this pic is a placeholder btw
   <img src="https://picsum.photos/id/1042/1366/300" class="parallax">
 </figure>
 
-<h2>News</h2>
-<% (blog.tags["featured"] || []).each do | article | %>
-  <article>
-    <h2>
-      <%= article.title %>
-    </h2>
+<p>
+  We're the Pupils' Committee. Our job is to represent you and defend your interests and opinions at meetings with the school management. We also organise events for you!
+</p>
 
-    <p>
-      <%= article.summary %>
-    </p>
-
-    <%= link_to 'Read more', article %>
-  </article>
-
-<% end %>
 
 <% content_for :scripts do %>
 <%= javascript_include_tag "parallax" %>
 <% end %>
+<% content_for :body_class, "homepage" %>
