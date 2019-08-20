@@ -130,6 +130,3 @@ DEPENDENCIES
   nokogiri
   redcarpet (~> 3.3, >= 3.3.3)
   tzinfo-data
-
-BUNDLED WITH
-   2.0.2
