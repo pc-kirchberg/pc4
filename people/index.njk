@@ -1,0 +1,22 @@
+---
+layout: layouts/post.njk
+title: Meet The Committee
+nav: true
+navtitle: Meet The Committee
+navorder: 10
+---
+
+{% for person in people %}
+    <div class="person">
+        {% if "image_url" in person %}
+            <div>
+                <img src="{{ person.image_url }}" alt="Photo of {{person.name}}" width="100" height="100" style="border-radius: 50%">
+            </div>
+        {% endif %}
+        <b>{{ person.name }}</b>
+        <div>{{ person.position }}</div>
+        {% if "bio" in person %}
+            <p>{{ person.bio | safe }} </p>
+        {% endif %}
+    </div>
+{% endfor %}

@@ -1,0 +1,21 @@
+---
+layout: layouts/home.njk
+tags:
+  - nav
+navtitle: Home
+nav: true
+nonav: true
+bodyclass: homepage
+navorder: 0
+---
+
+<div class="rather-big-masthead">
+  <h1>The Pupils' Committee of the European School Luxembourg 1</h1>
+  <ul class="nav homenav">
+    {% include "layouts/nav.njk" %}
+  </ul>
+</div>
+
+<h1>News</h1>
+{% set postslist = collections.posts %}
+{% include "postslist.njk" %}

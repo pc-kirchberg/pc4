@@ -1,0 +1,23 @@
+backend:
+  name: github
+  repo: pc-kirchberg/pc4
+
+media_folder: "img"
+
+collections:
+  - name: posts
+    label: "Posts"
+    folder: posts
+    create: true
+    extension: md
+    format: frontmatter
+    slug: "{{year}}-{{slug}}"
+    fields:
+      - name: title
+        label: Title
+        widget: string
+        required: true
+      - label: Contents
+        name: body
+        widget: markdown
+      

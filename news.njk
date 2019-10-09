@@ -1,0 +1,12 @@
+---
+layout: layouts/home.njk
+navtitle: News
+nav: true
+navorder: 1
+permalink: /posts/
+---
+
+<h1>News Archive</h1>
+
+{% set postslist = collections.posts %}
+{% include "postslist.njk" %}
