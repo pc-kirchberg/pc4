@@ -1,7 +1,6 @@
 ---
 title: This is my first post.
-author:
-  - William Shaw
+date: 2019-10-10T16:55:18.871Z
 tags:
   - another-tag
 ---
