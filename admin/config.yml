@@ -24,6 +24,7 @@ collections:
   - name: pages
     label: "Static Pages"
     folder: "pages"
+    label_singular: "Page"
     create: true
     extension: md
     format: frontmatter
@@ -56,6 +57,7 @@ collections:
   - name: people
     label: "Meet The Committee"
     folder: "data/people"
+    label_singular: "Member"
     create: true
     format: json
     slug: "{{slug}}"
