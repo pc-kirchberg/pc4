@@ -21,6 +21,38 @@ collections:
       - label: Contents
         name: body
         widget: markdown
+  - name: pages
+    label: "Static Pages"
+    folder: "pages"
+    create: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    fields:
+      - name: title
+        label: Title
+        widget: string
+        required: true
+      - name: nav
+        label: "Show in top-bar navigation?"
+        widget: boolean
+        default: false
+      - name: navtitle
+        label: "Page title in navigation"
+        required: false
+        widget: string
+        hint: "Customize the title of this page in the navigation. Leave it blank unless you have a good reason"
+      - name: navorder
+        label: "Page order in navigation"
+        required: false
+        widget: number
+        valueType: int
+        default: 0
+        hint: "Change the order of the pages in navigation - pages are displayed in ascending order."
+      - name: body
+        label: "Content"
+        widget: markdown
+        
   - name: people
     label: "Meet The Committee"
     folder: "data/people"

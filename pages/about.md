@@ -1,5 +1,4 @@
 ---
-layout: layouts/post.njk
 title: About Me
 nav: true
 navtitle: About

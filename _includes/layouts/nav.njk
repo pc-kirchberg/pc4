@@ -1,5 +1,5 @@
 {%- for nav in collections.nav -%}
     <li class="nav-item{% if nav.url == page.url %} nav-item-active{% endif %}">
-        <a href="{{ nav.url | url }}">{{ nav.data.navtitle }}</a>
+        <a href="{{ nav.url | url }}">{{ (nav.data.navtitle && nav.data.navtitle.length > 0) ? nav.data.navtitle : nav.title }}</a>
     </li>
 {%- endfor -%}
