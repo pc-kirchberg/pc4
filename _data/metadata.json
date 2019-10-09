@@ -1,16 +1,16 @@
 {
-  "title": "Your Blog Name",
-  "url": "https://myurl.com/",
-  "description": "I am writing about my experiences as a naval navel-gazer.",
+  "title": "Pupils' Committee",
+  "url": "https://pupilscom-esl1.eu/",
+  "description": "Keeping promises since 1953.",
   "feed": {
-    "subtitle": "I am writing about my experiences as a naval navel-gazer.",
+    "subtitle": "Keeping promises since 1953.",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
-    "url": "https://myurl.com/feed/feed.xml",
-    "id": "https://myurl.com/"
+    "url": "https://pupilscom-esl1.eu/feed/feed.xml",
+    "id": "https://pupilscom-esl1.eu/"
   },
   "author": {
-    "name": "Your Name Here",
-    "email": "youremailaddress@example.com"
+    "name": "The Pupils' Committee",
+    "email": "contact@pupilscom-esl1.eu"
   }
 }
