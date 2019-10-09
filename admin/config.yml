@@ -7,6 +7,7 @@ media_folder: "img"
 collections:
   - name: posts
     label: "Posts"
+    label_singular: "Post"
     folder: posts
     create: true
     extension: md
@@ -20,32 +21,30 @@ collections:
       - label: Contents
         name: body
         widget: markdown
-  - name: special_pages
-    label: "Special Pages"
-    files:
-      - label: "Meet The Committee"
-        name: people
-        file: "_data/people.json"
-        fields:
-        - name: name
-          label: Name
-          widget: string
-          required: true
-        - name: position
-          label: Position
-          widget: string
-          required: true
-        - name: since
-          label: Since
-          widget: number
-          valueType: int
-          required: false
-        - name: image_url
-          label: Photo
-          required: false
-          widget: image
-        - name: bio
-          label: Bio
-          required: false
-          widget: markdown
-          buttons: ["bold", "italic", "underscore"]
+  - name: people
+    label: "Meet The Committee"
+    folder: "_data/people"
+    format: json
+    fields:
+    - name: name
+      label: Name
+      widget: string
+      required: true
+    - name: position
+      label: Position
+      widget: string
+      required: true
+    - name: since
+      label: Since
+      widget: number
+      valueType: int
+      required: false
+    - name: image_url
+      label: Photo
+      required: false
+      widget: image
+    - name: bio
+      label: Bio
+      required: false
+      widget: markdown
+      buttons: ["bold", "italic", "underscore"]
