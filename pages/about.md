@@ -1,9 +1,7 @@
 ---
-title: About Me
+title: About
 nav: true
 navtitle: About
 navorder: 20
-templateClass: tmpl-post
 ---
-
-I am a person that writes stuff.
+Who are we?
