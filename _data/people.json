@@ -2,6 +2,8 @@
     {
         "name": "William Shaw",
         "position": "President",
-        "image_url": "https://unsplash.it/100/100"
+        "image_url": "https://unsplash.it/100/100",
+        "since": 2015,
+        "bio": "This is **cool**"
     }
 ]

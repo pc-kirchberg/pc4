@@ -15,8 +15,14 @@ navorder: 10
         {% endif %}
         <b>{{ person.name }}</b>
         <div>{{ person.position }}</div>
+        {% if "since" in person %}
+            <div>
+                <i>Member since {{ person.since }}</i>
+            </div>
+        {% endif %}
         {% if "bio" in person %}
-            <p>{{ person.bio | safe }} </p>
+            <p>{{ person.bio | markdown | safe }}
+            </p>
         {% endif %}
     </div>
 {% endfor %}

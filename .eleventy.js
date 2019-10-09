@@ -69,6 +69,10 @@ module.exports = function(eleventyConfig) {
     .use(markdownItAnchor, opts)
   );
 
+  eleventyConfig.addFilter("markdown", function(content) {
+    return markdownIt(options).render(content);
+  })
+
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
       ready: function(err, browserSync) {
