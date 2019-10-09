@@ -23,8 +23,10 @@ collections:
         widget: markdown
   - name: people
     label: "Meet The Committee"
-    folder: "_data/people"
+    folder: "data/people"
+    create: true
     format: json
+    slug: "{{slug}}"
     fields:
     - name: name
       label: Name
