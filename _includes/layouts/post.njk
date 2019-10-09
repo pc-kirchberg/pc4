@@ -4,6 +4,19 @@ templateClass: tmpl-post
 ---
 <h1>{{ title }}</h1>
 
+<div class="meta">
+    {% if authors %}
+    Written by {{ authors | join(", ") }}
+    {% endif %}
+    {% if not authors %}
+    Written
+    {% endif %}
+    {% if date %}
+    on {{ date | readableDate }}.
+    {% endif %}
+    {{ content | readtime }} minute read.
+</div>
+
 {{ content | safe }}
 
 <p><a href="{{ '/' | url }}">← Home</a></p>

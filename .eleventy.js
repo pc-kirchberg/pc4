@@ -35,6 +35,10 @@ module.exports = function(eleventyConfig) {
     });
   })
 
+  eleventyConfig.addFilter("readtime", function(content) {
+    return Math.ceil(content.split(" ").length / 200);
+  });
+
   // Get the first `n` elements of a collection.
   eleventyConfig.addFilter("head", (array, n) => {
     if( n < 0 ) {
@@ -71,7 +75,7 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addFilter("markdown", function(content) {
     return markdownIt(options).render(content);
-  })
+  });
 
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {

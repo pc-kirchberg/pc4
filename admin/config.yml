@@ -18,6 +18,21 @@ collections:
         label: Title
         widget: string
         required: true
+      - name: authors
+        label: Author(s)
+        widget: relation
+        required: false
+        collection: people
+        valueField: name
+        searchFields: [ "name", "position" ]
+        multiple: true
+      - name: date
+        label: Publication Date
+        required: true
+        widget: date
+      - name: tags
+        label: tags
+        widget: list
       - label: Contents
         name: body
         widget: markdown
@@ -50,6 +65,9 @@ collections:
         valueType: int
         default: 0
         hint: "Change the order of the pages in navigation - pages are displayed in ascending order."
+      - name: tags
+        label: tags
+        widget: list
       - name: body
         label: "Content"
         widget: markdown
